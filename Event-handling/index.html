@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery Crash Code</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: arial;
+            background: chocolate;
+            line-height: 1.5em;
+        }
+        
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            border-bottom: 4px #100 solid;
+        }
+        
+        .container {
+            color: white;
+            background: black;
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        #list {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hello this is Event Handling</h1>
+    </header>
+
+
+    <section class="container">
+        <input type="button" name="" value="Button" id="btn1">
+        <input type="submit" value="Submit me!!" id="btn2">
+        <input type="text">
+        <p id="para1">Laborum esse cillum velit incididunt non deserunt. Aliqua dolor fugiat nulla mollit do do ad fugiat sint cillum id ad velit magna. Et fugiat aliqua voluptate elit. Laboris consequat Lorem et aute duis nostrud ipsum labore consectetur ex ullamco
+            elit. Aliquip cupidatat aliqua ad sunt nostrud duis aute commodo labore veniam officia. Voluptate esse proident officia laborum. Ad ex dolore minim et id velit voluptate eiusmod sunt elit in proident.
+        </p>
+        <h1 class="coords"></h1>
+        <form id="form">
+            <input type="text" value="" id="name" placeholder="Name">
+            <input type="text" value="" id="email" placeholder="Email">
+            <input type="password" value="" placeholder="Password" id="password">
+            <select id="gender">
+                <option value="Male" id="male">Male</option>
+                <option value="Female" id="female">Female</option>
+            </select>
+            <input type="submit" value="Submit me" id="submit">
+
+        </form>
+    </section>
+    <footer>
+        <h1>Footer goes here</h1>
+    </footer>
+
+    <script>
+        // $(document).ready(function() {
+        //     $("#btn1").click(function() {
+        //         alert('button is clicked');
+        //     });
+        // });
+
+        // $('#btn1').on('click', function() {
+        //     $('#para1').hide();
+        // });
+        // $('#btn2').on('click', function() {
+        //     $('#para1').show();
+        // });
+
+        // $('#btn1').on('click', function() {
+        //     $('#para1').toggle();
+        // });
+
+        // $('#btn2').dblclick(function() {
+        //     $('#para1').toggle();
+        // });
+        // $('#btn2').dblclick(function() {
+        //     $('#para1').toggle();
+        // });
+        // $('#btn1').on('mouseenter', function() {
+        //     $('#para1').toggle();
+        // });
+        // $('#btn1').on('mouseleave', function() {
+        //     $('#para1').toggle();
+        // }); 
+        // $('#btn1').on('mousemove', function() {
+        //     $('#para1').toggle();
+        // });
+
+        $('#btn1').on('mousedown', function() {
+            $('#para1').toggle();
+        });
+
+        $('#btn1').on('mouseup', function() {
+            $('#para1').toggle();
+        });
+
+        $(document).on('mousemove', function(e) {
+            $('.coords').html('Coords Y:' + e.clientY + ', X: ' + e.clientX);
+        });
+        $('input').focus(function() {
+            $(this).css('background', 'pink');
+        });
+        $('input').blur(function() {
+            $(this).css('background', 'white');
+        });
+
+        $('#form').submit(function(e) {
+            e.preventDefault();
+            let name = $('input#name').val();
+            console.log(name);
+        });
+        $('select#gender').change(function(e) {
+            alert(e.target.value);
+        });
+    </script>
+</body>
+
+</html>

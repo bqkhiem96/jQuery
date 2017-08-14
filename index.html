@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery Crash Code</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: arial;
+            background: chocolate;
+            line-height: 1.5em;
+        }
+        
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            border-bottom: 4px #100 solid;
+        }
+        
+        .container {
+            color: white;
+            background: black;
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        #list {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hello this is jQuery</h1>
+    </header>
+
+    <section class="container">
+        <h1 id="heading-1">jQuery</h1>
+        <p id="paragraph-1">Nostrud veniam officia ex labore aliquip pariatur fugiat nostrud anim cupidatat et mollit. Dolor veniam dolore Lorem minim nisi. Aliqua cillum in in ad dolore sunt occaecat sunt commodo.</p>
+        <span>Lorem</span>
+    </section>
+
+
+    <section class="container">
+        <h1 id="heading-2">jQuery</h1>
+        <p id="paragraph-2">Nostrud veniam officia ex labore aliquip pariatur fugiat nostrud anim cupidatat et mollit. Dolor veniam dolore Lorem minim nisi. Aliqua cillum in in ad dolore sunt occaecat sunt commodo.</p>
+        <span>Lorem</span>
+        <ul id="list">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+        <a href="google.com" id="gg">Googledotcom</a>
+        <a href="yahoo.com" id="yahoo">Yahoodotcom</a>
+    </section>
+
+    <section class="container">
+        <input type="button" name="" value="Button">
+        <input type="submit" value="Submit me!!">
+        <input type="text">
+
+    </section>
+    <footer>
+        <h1>Footer goes here</h1>
+    </footer>
+
+    <script>
+        // $("h1").hide();
+        $("span").css('color', 'blue');
+        // $("ul#list li:first").css('color', '#276FFF');
+        // $("ul#list li:last").css('color', '#276FFF');
+        // $("ul#list li:odd").css('border', '2px solid yellow');
+        // $("ul#list li:odd").css('margin-bottom', '12px');
+        // $("ul#list li:odd").css('margin-top', '12px');
+
+        // $("ul#list li:even").css('border', '2px dotted magenta');
+
+        $(":button").hide();
+
+        $("[href]").css('color', 'green');
+        // $("*").hide();
+    </script>
+</body>
+
+</html>
